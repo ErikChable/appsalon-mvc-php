@@ -29,7 +29,7 @@ class Email
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
 
-        $mail->setFrom('erikchable882003@gmail.com', 'appSalon');
+        $mail->setFrom('erikmauchable88@gmail.com', 'appSalon');
         $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Confirma tu cuenta';
 
@@ -61,7 +61,7 @@ class Email
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
 
-        $mail->setFrom('erikchable882003@gmail.com', 'appSalon');
+        $mail->setFrom('erikmauchable88@gmail.com', 'appSalon');
         $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Reestablece tu password';
 
