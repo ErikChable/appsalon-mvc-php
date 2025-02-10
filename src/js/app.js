@@ -197,17 +197,16 @@ function seleccionarFecha() {
         const dia = new Date(e.target.value).getUTCDay(); 
         const fechaSeleccionada = e.target.value;
         
-        if ( [6, 0].includes(dia) ) {
-            e.target.value = ''; // Limpia el input
-            mostrarAlerta("Cerrado Fines de Semana", "error", ".formulario");
-        }
-        if(new Date(fechaSeleccionada) < new Date(fechaMinima)) {
+        if(fechaSeleccionada < fechaMinima) {
             e.target.value = '';
             mostrarAlerta("No puedes seleccionar una fecha anterior a " + fechaMinima, "error", ".formulario");
+        } else if ( [6, 0].includes(dia) ) {
+            e.target.value = ''; // Limpia el input
+            mostrarAlerta("Cerrado Fines de Semana", "error", ".formulario");
         } else if(diasFeriados.includes(fechaSeleccionada)) {
             e.target.value = ''; // Limpia el input
             mostrarAlerta("Cerrado Días Festivos", "error", ".formulario");
-        }  else {
+        } else {
             cita.fecha = fechaSeleccionada;
         }
     });
