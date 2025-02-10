@@ -190,6 +190,7 @@ function seleccionarFecha() {
     const inputfecha = document.querySelector('#fecha');
     const diaDespues = new Date();
     diaDespues.setDate(diaDespues.getDate() + 1); // Dia actual +1
+    diaDespues.setHours(0, 0, 0, 0); // Nos aseguramos de estar en horario local
     const fechaMinima = diaDespues.toISOString().split('T')[0]; // Convertir a 'YYYY-MM-DD'
 
     inputfecha.addEventListener('input', function(e) {
