@@ -200,7 +200,8 @@ function seleccionarFecha() {
         if ( [6, 0].includes(dia) ) {
             e.target.value = ''; // Limpia el input
             mostrarAlerta("Cerrado Fines de Semana", "error", ".formulario");
-        } else if(new Date(fechaSeleccionada) < new Date(fechaMinima)) {
+        }
+        if(new Date(fechaSeleccionada) < new Date(fechaMinima)) {
             e.target.value = '';
             mostrarAlerta("No puedes seleccionar una fecha anterior a " + fechaMinima, "error", ".formulario");
         } else if(diasFeriados.includes(fechaSeleccionada)) {
