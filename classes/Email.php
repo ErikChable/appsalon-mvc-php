@@ -40,8 +40,8 @@ class Email
         $contenido = "<html>";
         $contenido = "<body>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> has creado tu cuenta en AppSalon, ahora solo debes confirmarla presionando el siguiente enlace.</p>";
-        $contenido .= "<p>Presiona aquí <a href='" . $_ENV['APP_URL'] . "/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
-        $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
+        $contenido .= "<p>Presiona aquí <a href='" . $_ENV['APP_URL'] . "/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta.</a></p>";
+        $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje.</p>";
         $contenido .= "</body>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
@@ -72,7 +72,7 @@ class Email
         $contenido = "<html>";
         $contenido = "<body>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> has solicitado reestablecer tu password, dale click a el siguiente enlace para continuar. </p>";
-        $contenido .= "<p>Presiona aquí <a href='" . $_ENV['APP_URL'] . "/recuperar?token=" . $this->token . "'>Reestablecer Password</a></p>";
+        $contenido .= "<p>Presiona aquí <a href='" . $_ENV['APP_URL'] . "/recuperar?token=" . $this->token . "'>Reestablecer Password.</a></p>";
         $contenido .= "<p>Si tu no solicitaste este cambio, puedes ignorar el mensaje.</p>";
         $contenido .= "</body>";
         $contenido .= "</html>";
